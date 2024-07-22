@@ -56,8 +56,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <x-auth.footers.guest.basic-footer textColor='text-white'></x-auth.footers.guest.basic-footer>
+            </div>            
         </div>
     </main>
     @push('js')
