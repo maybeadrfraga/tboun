@@ -32,7 +32,7 @@
                         @endif
                         @can('create', App\Models\User::class)
                         <div class="col-12 text-end">
-                            <a class="btn bg-gradient-dark mb-0 me-4" href="{{ route('add.user') }}"><i
+                            <a class="btn btn-warning mb-0 me-4" href="{{ route('add.user') }}"><i
                                     class="material-icons text-sm">add</i>&nbsp;&nbsp;Add User</a>
                         </div>
                         @endcan
