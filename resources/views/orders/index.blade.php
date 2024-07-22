@@ -74,7 +74,8 @@
                                                 </td>
                                                 <td class="text-xs font-weight-normal">
                                                     <div class="d-flex align-items-center">
-                                                        @if ($order['status'] == 'processing')
+                                                        {{ $order['status']}}
+                                                        <!-- @if ($order['status'] == 'processing')
                                                             <button
                                                                 class="btn btn-icon-only btn-rounded btn-outline-warning mb-0 me-2 btn-sm d-flex align-items-center justify-content-center"><i
                                                                     class="material-icons text-sm"
@@ -91,7 +92,7 @@
                                                                     aria-hidden="true">clear</i></button>
                                                             <span>{{ $order['status'] }}</span>
                                                                                                       </div>
-                                                                                                      @endif
+                                                                                                      @endif -->
                                                 </td>
                                                 <td class="text-xs font-weight-normal">
                                                     <div class="d-flex align-items-center">
