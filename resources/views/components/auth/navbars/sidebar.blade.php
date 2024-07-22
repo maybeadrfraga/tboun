@@ -42,6 +42,7 @@
             <li class="nav-item mt-0">
                 <a class="nav-link text-white {{ $activeSubitem == 'order-list' ? ' active ' : '' }}"
                     href="{{ route('orders.index') }}">
+                    <span class="sidenav-mini-icon"> O </span>
                     <span class="sidenav-normal ps-1"> Orders </span>
                 </a>
             </li>
