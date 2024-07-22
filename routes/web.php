@@ -31,16 +31,16 @@ Route::get('/', function () {
     return redirect('sign-in');
 })->middleware('guest');
 
-Route::get('/products', [ProductController::class, 'index'])->name('products.index');
-Route::get('products/{id}', [ProductController::class, 'show'])->name('product.show');
+Route::get('/products', [ProductController::class, 'index'])->middleware('auth')->name('products.index');
+Route::get('products/{id}', [ProductController::class, 'show'])->middleware('auth')->name('product.show');
 
 
-Route::resource('tickets', TicketController::class);
-Route::post('tickets/{ticket}/responses', [TicketResponseController::class, 'store'])->name('tickets.responses.store');
+Route::resource('tickets', TicketController::class)->middleware('auth');
+Route::post('tickets/{ticket}/responses', [TicketResponseController::class, 'store'])->middleware('auth')->name('tickets.responses.store');
 
 
-Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
-Route::get('/orders/{id}', [OrderController::class, 'show'])->name('orders.show');
+Route::get('/orders', [OrderController::class, 'index'])->middleware('auth')->name('orders.index');
+Route::get('/orders/{id}', [OrderController::class, 'show'])->middleware('auth')->name('orders.show');
 
 
 // Route::get('dashboard', [DashboardController::class, 'index'])->middleware('auth')->name('dashboard');
